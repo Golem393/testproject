@@ -24,16 +24,15 @@ pipeline {
                  stage('Four') {
                  parallel { 
                             stage('Unit Test') {
-                           steps {
-                                echo "Running the unit test..."
-                           }
-                           }
+							   steps {
+									echo "Running the unit test..."
+							   }
+							}
                             stage('Integration test') {
-                              agent any{
-                              steps {
-                                echo "Running the integration test..."
-                              }
-                           }
+								steps {
+									echo "Running the integration test..."
+									}
+                            }
                            }
                            }
               }
